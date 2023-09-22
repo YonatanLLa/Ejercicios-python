@@ -1,3 +1,3 @@
 git add .
-git commit -m "Ejercicios terminado"
+git commit -m "ejercio de matrices en proceso"
 git push
