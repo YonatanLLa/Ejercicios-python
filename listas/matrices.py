@@ -8,16 +8,26 @@ def multiplicar_matrices(matriz1, matriz2):
     
     # Iniciar la matriz resultado con ceros
     filas_resultado = len(matriz1)
+    print(filas_resultado)
     columnas_resultado = len(matriz2[0])
+    print(columnas_resultado)
     
     resultado = [[0 for _ in range(columnas_resultado)] for _ in  range(filas_resultado)]
     
-    
     print(resultado)
+    # Realizar la multiplicacion de matrices
+    for i in range(filas_resultado):
+        for j in range(columnas_resultado):
+            for k in range(len(matriz2)):
+                resultado[i][j] += matriz1[i][k] * matriz2[k][j]
     
-    return
+    return resultado
 
 matriz1 = [[1,2],[3,4]]
 matriz2 = [[5,6],[7,8]]
 
-multiplicar_matrices(matriz1,matriz2)
+resultado = multiplicar_matrices(matriz1,matriz2)
+
+for fila in resultado:
+    print(fila)
+
